@@ -8,7 +8,11 @@ from discord.ext import commands
 from discord import app_commands
 import re
 # Ваш токен бота
-TOKEN = 'MTEzNjM4NDM4MzIyNjQ4MjY4OA.GUzU2I._RIWaRAx8cuAlaCqh9AjVuxKMOsoGlq83Hz9nk'
+
+def read_token_from_file(filename):
+    with open(filename, "r") as file:
+        return file.read().strip()
+
 client = discord.Client(intents=discord.Intents.all())
 
 # Список возможных ответов для команды !шар
@@ -103,19 +107,6 @@ async def on_ready():
     print(" ")
     print(" ")
     print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
     print(f"Bot is on {len(client.guilds)} servers")
     print("NamelessBot is ready :)")
     print(" ")
@@ -131,6 +122,7 @@ async def on_ready():
     print(" ")
     print(" ")
     print(" ")
+    print("--------------------------------------------")
     print("")
 
 
@@ -1203,5 +1195,7 @@ def parse_time(время):
         pass
     return секунды
 
+
+token = read_token_from_file("token.txt")
 # Запускаем бота
-client.run(TOKEN)
+client.run(token)
