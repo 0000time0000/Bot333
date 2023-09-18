@@ -8,7 +8,7 @@ from discord.ext import commands
 from discord import app_commands
 import re
 # Ваш токен бота
-TOKEN = 'MTEzNjM4NDM4MzIyNjQ4MjY4OA.GJjhtw.fdk3_l6WmYs69sirTNtJUnqYfXJV4Rs7h7L8P0'
+TOKEN = 'MTEzNjM4NDM4MzIyNjQ4MjY4OA.GUzU2I._RIWaRAx8cuAlaCqh9AjVuxKMOsoGlq83Hz9nk'
 client = discord.Client(intents=discord.Intents.all())
 
 # Список возможных ответов для команды !шар
